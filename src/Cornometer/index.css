@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #2b2b2b;
+    }
+
+.cornometer {
+    h1 {
+        font-size: 4rem;
+        color: #fff;
+        text-shadow: 0px 0px 4px #fff;
+        }
+
+    .container {
+        border: 5px solid #676767;
+        border-radius: 50px;
+        padding: 20px 30px;
+        background-color: #fff;
+        text-align: center;
+        }
+
+    .display {
+        font-size: 3.5rem;
+        font-family: monospace, cursive;
+        text-shadow: 0px 0px 2px #242424;
+        margin-block-end: 20px;
+        text-align: center;
+        font-weight: bold;
+        }
+
+    .controls button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: none;
+        margin: 5px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+    .startBtn {
+        background-color: #47f937;
+        }
+    .startBtn:hover,
+    .startBtn:focus-visible {
+        background-color: #3ae42bfe;
+        }
+
+    .stopBtn {
+        background-color: #fe2828;
+        }
+        .stopBtn:hover,
+        .stopBtn:focus-visible {
+        background-color: #e42424;
+        }
+
+    .resetBtn {
+        background-color: #1283fc;
+        }
+        .resetBtn:hover,
+        .resetBtn:focus-visible {
+        background-color: #1070d7;
+        }
+}
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        

@@ -1,0 +1,25 @@
+body {
+        background-image: url(https://uploadkon.ir/uploads/877f17_26StockCake-Purple-City-Dreams-1541433-standard.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 0;
+        }
+
+.clock-container {
+        display: flex;
+        justify-content: center;
+        margin-block: 200px;
+    }
+
+.clock {
+        font-family: monospace;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #fff;
+        backdrop-filter: blur(5px);
+        background-color: hsl(0, 0%, 100%, 0.2);
+        width: 100%;
+        text-align: center;
+    }

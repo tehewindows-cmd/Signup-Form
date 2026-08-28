@@ -1,0 +1,27 @@
+.color-picker-container {
+    text-align: center;
+    margin-block-start: 100px;
+    font-family: Arial, sans-serif;
+
+    input {
+        margin-block-start: 20px;
+        cursor: pointer;
+    }
+}
+
+.color-display {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    min-inline-size: 300px;
+    min-block-size: 200px;
+    border-radius: 20px;
+
+    p {
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+

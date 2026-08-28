@@ -1,0 +1,96 @@
+        body {
+            background-color: hsl(0, 0%, 10%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-block-start: 50px;
+        }
+
+        .calculator {
+            font-family: sans-serif;
+            background-color: hsl(0, 0%, 15%);
+            border-radius: 15px;
+            overflow: hidden;
+            max-inline-size: 400px;
+            box-shadow: 0 0 10px hsl(220, 100%, 60%);
+        }
+
+        #display {
+            inline-size: 100%;
+            padding: 20px;
+            text-align: left;
+            border: none;
+            font-size: 4rem;
+            background-color: hsl(0, 0%, 20%);
+            color: hsl(0, 0%, 100%);
+        }
+        #display.result {
+            color: hsl(220, 100%, 60%);
+        }
+
+        .keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 15px;
+            /* margin-left: 5px; */
+            border-top: 1px solid hsl(220, 100%, 60%);
+        }
+
+        button {
+            inline-size: 75px;
+            block-size: 75px;
+            border-radius: 50px;
+            border: none;
+            background-color: hsl(0, 0%, 30%);
+            color: hsl(0, 0%, 100%);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:nth-child(17) {
+            background-color: hsl(0, 80%, 50%);
+        }
+        @media (hover: hover) {
+            button:nth-child(17):hover {
+            background-color: hsl(0, 80%, 55%);
+            }
+        }
+        button:nth-child(17):active {
+            background-color: hsl(0, 80%, 70%);
+        }
+
+        button:nth-child(16) {
+            color: hsl(0, 0%, 20%);
+            background-color: hsl(150, 80%, 50%);
+        }
+        @media (hover: hover) {
+            button:nth-child(16):hover {
+            background-color: hsl(150, 80%, 55%);
+        }
+        }
+        button:nth-child(16):active {
+            background-color: hsl(150, 80%, 70%);
+        }
+
+        @media (hover: hover) {
+            button:hover {
+            background-color: hsl(0, 0%, 35%);
+            }
+        }
+        button:active {
+            background-color: hsl(0, 0%, 50%);
+        }
+
+        .signs {
+            background-color: hsl(35, 100%, 55%);
+        }
+        @media (hover: hover) {
+            .signs:hover {
+                background-color: hsl(35, 100%, 60%);
+            }
+        }
+        .signs:active {
+            background-color: hsl(35, 100%, 75%);
+        }
