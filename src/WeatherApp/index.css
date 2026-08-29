@@ -8,7 +8,7 @@
         }
 
         .spinner {
-            display: none;
+            justify-self: center;
             inline-size: 50px;
             block-size: 50px;
             border: 6px solid hsl(0, 0%, 85%);
@@ -66,7 +66,6 @@
             align-items: center;
             border-radius: 20px;
             transition: box-shadow 0.3s ease;
-            display: none;
 
             @media(width < 550px) {
                 min-inline-size: 250px;
