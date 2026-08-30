@@ -6,6 +6,10 @@ async function GetWeatherData(city) {
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fa`;
 
     const response = await fetch(apiURL);
+
+    if (!response.ok) {
+        throw new Error('"شهر مورد نظر یافت نشد"');
+    }
     return await response.json();
 };
 
