@@ -110,7 +110,7 @@ function FormFa() {
         <div className="card">
             <form method="POST" className="card-body" noValidate onSubmit={(e) => {
                   e.preventDefault();
-                  showToast("ثبت نام با موفقیت انجام شد✓ 🎉")}}>
+                  showToast("🎉 ✓ثبت نام با موفقیت انجام شد")}}>
                     
                 <h1 className="card-header">ثبت نام</h1>
 
@@ -151,14 +151,14 @@ function FormFa() {
 
                 <a href="#" className="passforgot" onClick={(e) => { 
                    e.preventDefault();
-                   showToast("لینک بازیابی رمز عبور ارسال شد! 📧")}}>رمز عبور را فراموش کرده‌اید؟</a>
+                   showToast("📧 !لینک بازیابی رمز عبور ارسال شد")}}>رمز عبور را فراموش کرده‌اید؟</a>
 
                 <button type="submit" className="submitBtn" disabled={disableButt}>تایید</button>
 
                 <p>حساب کاربری دارید؟
                     <a href="#" className="signup" onClick={(e) => {
                        e.preventDefault();
-                       showToast("در حال انتقال به صفحه ورود... 🎉")}}> ورود</a></p>
+                       showToast("🎉 ...در حال انتقال به صفحه ورود")}}> ورود</a></p>
             </form>
 
             <div className="toast-container" >
