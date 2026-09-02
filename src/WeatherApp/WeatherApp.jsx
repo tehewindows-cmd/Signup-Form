@@ -39,6 +39,7 @@ function WeatherApp() {
                 const weatherData = await GetWeatherData(cityInput);
                 handleWeatherData(weatherData);
                 setStatus("success");
+                console.log(weatherData);
             }
             catch(error) {
                 setStatus("error");
