@@ -20,7 +20,7 @@ function WeatherApp() {
         city: null,
         temp: null,
         humidity: null,
-        desc: null,
+        wind: null,
         emoji: null
     })
     const [status, setStatus] = useState("idle");
@@ -52,14 +52,15 @@ function WeatherApp() {
         const {
             name: city,
             main: { temp, humidity },
-            weather: [{ description, id }]
+            weather: [{ description, id }],
+            wind: { speed }
         } = data;
 
         setWeather({
             city: city,
             temp: temp,
             humidity: humidity,
-            desc: description,
+            wind: speed,
         });
 
         switch(true) {
@@ -91,23 +92,37 @@ function WeatherApp() {
 
     return (
         <>
-            <form className="weatherForm" onSubmit={handleSubmit}>
-                <button type="submit">دریافت آب و هوا</button>
-                <input type="text" value={cityInput} className="cityInput" placeholder="نام شهر را وارد کنید" dir="auto" 
-                       onChange={(e) => setCityInput(e.target.value)}/>
-            </form>
-
-            {status === "loading" && <div className="spinner"></div>}
-
-            {status === "error" && <div className="Card"><p className="errorDisplay">{errorMessage}</p></div>}
-            {status === "success" && 
             <div className="Card">
-                <h1 className="cityDisplay">{weather.city}</h1>
-                <p className="tempDisplay">{weather.temp.toFixed(1)}°C</p>
-                <p className="humidityDisplay">رطوبت: %{weather.humidity}</p>
-                <p className="descDisplay">{weather.desc}</p>
-                <p className="weatherEmoji">{weather.emoji}</p>
-            </div>}
+                <div className="weather-box">
+                    <button type="submit" onClick={handleSubmit}>
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text" value={cityInput} className="cityInput" placeholder="نام شهر را وارد کنید" dir="auto"
+                            onChange={(e) => setCityInput(e.target.value)}/>
+                </div>
+
+                {status === "loading" && <div className="spinner"></div>}
+
+                {status === "error" && <p className="errorDisplay">{errorMessage}</p>}
+
+                {status === "success" &&
+                    <>
+                        <p className="weatherEmoji">{weather.emoji}</p>
+                        <p className="tempDisplay">{weather.temp.toFixed(1)}°C</p>
+                        <h1 className="cityDisplay">{weather.city}</h1>
+                        <div className="flex-box">
+                                <i class="fa-solid fa-water"></i>
+                                <p className="humidityDisplay">{weather.humidity}%
+                                    <br /><p>رطوبت</p>
+                                </p>
+
+                            <i class="fa-solid fa-wind"></i>
+                            <p className="windDisplay">{weather.wind} km/h
+                                <br /><p>سرعت باد</p>
+                            </p>
+                        </div>
+                    </>}
+            </div>
         </>
     )
 }

@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: hsl(0, 0%, 95%);
+            font-family: "vazirmatn", sans-serif;
+            background-color: hsl(0, 0%, 15%);
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -11,26 +13,27 @@
             justify-self: center;
             inline-size: 50px;
             block-size: 50px;
-            border: 6px solid hsl(0, 0%, 85%);
-            border-top: 6px solid hsl(120, 100%, 40%);
+            border: 6px solid hsla(0, 0%, 0%, 0.7);
+            border-top: 6px solid hsla(0, 0%, 100%, 0.9);
             border-radius: 50%;
-            margin: 20px;
-            animation: spin 1s infinite;
+            margin: 30px;
+            animation: spin 1s linear infinite;
         }
         @keyframes spin {
             from {transform: rotate(0deg);}
             to {transform: rotate(360deg);}
         }
 
-        .weatherForm {
-            margin: 20px;
+        .weather-box {
+            display: flex;
+            gap: 20px;
         }
 
         .cityInput {
-            padding: 8px;
-            font-size: 1.3rem;
-            inline-size: 150px;
-            border-radius: 10px;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            border: none;
             box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
             transition: box-shadow 0.3s ease;
             text-align: start;
@@ -38,26 +41,31 @@
         .cityInput:focus {
             box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.5);
         }
+        .cityInput::placeholder {
+            text-align: right;
+        }
 
         button[type = submit] {
-            padding: 10px 10px;
+            padding: 10px;
             font-size: 1.3rem;
             margin-inline: 5px;
             border: none;
-            border-radius: 10px;
-            background-color: hsl(120, 100%, 40%);
+            inline-size: 50px;
+            block-size: 50px;
+            border-radius: 50px;
             box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
-            color: white;
-            font-weight: bold;
+            background-color: hsl(0, 0%, 100%);
+            color: hsla(0, 0%, 0%, 0.5);
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
         button[type = submit]:hover {
-            background-color: hsl(120, 100%, 45%);
+            background-color: hsl(0, 0%, 95%);
         }
 
         .Card {
-            background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+            margin-block-start: 50px;
+            background: linear-gradient(130deg, hsl(169, 87%, 48%), hsl(209, 86%, 46%));
             padding: 50px;
             min-inline-size: 300px;
             box-shadow: 2px 2px 15px hsla(0, 0%, 0%, 0.5);
@@ -75,38 +83,50 @@
             box-shadow: 2px 2px 15px hsla(0, 0%, 0%, 0.7);
         }
 
-        .cityDisplay {
-            font-size: 3.5rem;
-            margin-block: 0;
-            color: hsla(0, 0%, 25%);
+        .weatherEmoji {
+            margin-block: 20px 0;
+            font-size: 7.5rem;
         }
 
         .tempDisplay {
             margin-block: 20px 0;
             font-size: 3.5rem;
-            color: hsla(0, 0%, 25%);
-        }
-
-        .humidityDisplay {
-            margin-block: 20px 0;
-            font-size: 1.2rem;
+            color: hsl(0, 0%, 100%);
             font-weight: bold;
         }
 
-        .descDisplay {
-            font-style: italic;
-            margin-block: 20px 0;
+        .cityDisplay {
+            font-size: 3.5rem;
+            margin-block: 0;
+            color: hsla(0, 0%, 95%);
+        }
+
+        .flex-box {
+            margin-block: 30px 0;
+            display: flex;
+            color: hsla(0, 0%, 95%, 0.95);
             font-size: 1.5rem;
-            font-weight: bold;
         }
 
-        .weatherEmoji {
-            margin-block: 10px 0;
-            font-size: 7.5rem;
+        .fa-water, .fa-wind {
+            font-size: 3rem;
+        }
+        .humidityDisplay {
+            transform: translateY(5px);
+            margin-inline: 10px 50px;
+        }
+
+        .windDisplay {
+            transform: translateY(5px);
+            margin-inline-start: 10px;
+        }
+
+        p {
+            margin: 0;
         }
 
         .errorDisplay {
-            margin-block: 0;
+            margin-block-start: 50px;
             font-size: 1.5rem;
             color: hsl(0, 80%, 20%);
         }
